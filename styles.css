@@ -61,7 +61,7 @@ nav ul li a:hover {
 
 .menu-toggle {
     display: none;
-    font-size: 60px;
+    font-size: 40px;
     cursor: pointer;
     position: absolute;
     right: 20px;
@@ -71,6 +71,7 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
+
     nav ul {
         display: none;
         flex-direction: column;
@@ -79,13 +80,20 @@ nav ul li a:hover {
         right: 20px;
         background-color: #444;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
         width: 200px;
         margin-top: 25px;
+        padding: 10px 0px;
     }
 
     nav ul li {
-        text-align: right;
-        margin: 10px 0;
+        list-style-type: none; /* Remove bullet points */
+        text-align: center; /* Center text within each list item */
+        padding: 15px 0; /* Reduce padding for more button-like appearance */
+        border: 1px solid #333; /* Change to a dark border */
+        background-color: #555; /* Button background colour */
+        color: white; /* Text colour */
+        cursor: pointer; /* Pointer cursor to indicate clickable elements */
     }
 
     /* Show the menu when it's toggled */
