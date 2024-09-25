@@ -1,0 +1,364 @@
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Navigation Styles */
+nav {
+    background: #444;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 0.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    border: 2px solid #393939;
+    background-color: #393939;
+    color: rgb(161, 160, 160);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 60px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #000000;
+    z-index: 1000; 
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #444;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        margin-top: 25px;
+    }
+
+    nav ul li {
+        text-align: right;
+        margin: 10px 0;
+    }
+
+    /* Show the menu when it's toggled */
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle icon on small screens */
+    }
+}
+
+
+/* Links Styles */
+.links ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.links ul li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    color: #444;
+    background-color: #d8d8d8;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.links ul li a:hover {
+    background-color: #bdbcbc;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Main Content Styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+section {
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+    width: 80%;
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Social Media Styles */
+.socialMedia {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socialMedia .link-icon i {
+    font-size: 30px;
+}
+
+.link-icon {
+    font-size: 15px;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.link-icon i {
+    margin-left: 5px;
+    font-size: 40px;
+}
+
+.link-icon:hover {
+    color: #007BFF;
+}
+
+/* Image Container Styles */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-container img {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: 40%;
+    height: auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+    }
+
+    .image-container img {
+        max-width: 80%;
+    }
+}
+
+/* Screenshot Container Styles */
+.screenshot-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.screenshot-container img {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: 20%;
+    height: auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Instagram Container Styles */
+.instagram-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.instagram-container iframe {
+    max-width: 100%;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .instagram-container {
+        flex-direction: column;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button Styles */
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+/* Hide Links on Mobile */
+@media (max-width: 768px) {
+    .links {
+        display: none;
+    }
+}
+
+/* Contact Form Styles */
+#contactForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #555;
+    background-color: #fff;
+}
+
+#contactForm input[type="email"]:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+#contactForm textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+#contactForm button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #0056b3;
+}
+
+#contactForm button:active {
+    background-color: #004080;
+}
+
+#contactForm input[type="email"],
+#contactForm textarea,
+#contactForm button {
+    margin-top: 10px;
+}
+
+/* List Styles */
+ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+ul li {
+    margin: 0.5rem 0;
+}
